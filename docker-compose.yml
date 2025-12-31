@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: containerized-flask-app:local
+    container_name: flask_app
+    environment:
+      - APP_PORT=8081
+    ports:
+      - "5001:8081"
