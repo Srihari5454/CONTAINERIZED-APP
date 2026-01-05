@@ -28,7 +28,7 @@ jobs:
 
     - name: Verify health
       run: |
-        docker run -d -e APP_PORT=8081 -p 8081:8081 \
+        docker run -d -e APP_PORT=8081 -p 5001:8081 \
         ${{ secrets.DOCKERHUB_USERNAME }}/containerized-flask-app:latest
         sleep 5
         curl http://localhost:8081/health
